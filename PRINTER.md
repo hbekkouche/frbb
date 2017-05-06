@@ -5,6 +5,9 @@ Unfortunately the printer isn't supported by [CUPS](https://github.com/apple/cup
 
 
 
-### Building and Installing Zebra 2030 TPP Printer Drivers
-1) install git and build-utils
+### Building and Installing Zebra 2030 TPP Printer Drivers on the Raspberry PI
+1) sudo apt-get install build-essential git gcc
+2) Zebra CUPS printer drivers for the 2030 printer are not found in the current version of CUPS but a driver for the printer is available on [SourceForge](https://sourceforge.net/projects/zebratechcups/files/) but I'm committing the file to this repository, not sure how long SourceForge will be available and it took a long timt to find the driver.
+
+
 
