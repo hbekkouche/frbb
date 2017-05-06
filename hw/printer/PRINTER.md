@@ -14,8 +14,9 @@ Zebra CUPS printer drivers for the 2030 printer are not found in the current ver
 
 Download [CUPS 2.2.3 from Github](https://github.com/apple/cups/tree/v2.2.3) 
 ```
-git clone https://github.com/apple/cups/tree/v2.2.3
+git clone https://github.com/apple/cups.git
 cd cups
+git checkout tags/v2.2.3
 ```
 
 Apply Zebra patch for 2030 printer
@@ -26,7 +27,7 @@ git apply --stat zebra2030_support.patch
 
 Build the new version of CUPS
 ```
-./configure --prefix=./cups
+./configure --prefix="$PWD"
 make
 ```
 
