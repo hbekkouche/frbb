@@ -13,10 +13,10 @@ Zebra CUPS printer drivers for the 2030 printer are not found in the current ver
 Download [CUPS 2.2.3 from Github](https://github.com/apple/cups/tree/v2.2.3) 
 git clone https://github.com/apple/cups/tree/v2.2.3
 
-`cd cups`
+```cd cups```
 
 Apply Zebra patch for 2030 printer
-`git apply --stat zebra2030_support.patch`
+```git apply --stat zebra2030_support.patch```
 
 Build the new version of CUPS
 ```
@@ -25,10 +25,10 @@ make
 ```
 
 Since we installed cups above just need to copy the newly compilied driver for the Zebra 2030 Printer
-`sudo cp rastertozebrakiosk /usr/lib/cups/filter/`
+```sudo cp rastertozebrakiosk /usr/lib/cups/filter/```
 
 Restart CUPs and pickup the new Zebra2030 driver
-`sudo systemctl restart cups`
+```sudo systemctl restart cups```
 
 Having the driver installed get's us part way, still need to import the settings used to configure the printer. I also found these hard to find, and they still needed modification to work.
 PPD file is located in this repository
