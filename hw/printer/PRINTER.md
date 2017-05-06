@@ -6,8 +6,45 @@ Unfortunately the printer isn't supported by [CUPS](https://github.com/apple/cup
 
 
 ### Building and Installing Zebra 2030 TPP Printer Drivers on the Raspberry PI
-1) sudo apt-get install build-essential git gcc
-2) Zebra CUPS printer drivers for the 2030 printer are not found in the current version of CUPS but a driver for the printer is available on [SourceForge](https://sourceforge.net/projects/zebratechcups/files/) but I'm committing the file to this repository, not sure how long SourceForge will be available and it took a long timt to find the driver.
+```
+sudo apt-get install build-essential git gcc cups
+```
+
+Zebra CUPS printer drivers for the 2030 printer are not found in the current version of CUPS but a driver for the printer is available on [SourceForge](https://sourceforge.net/projects/zebratechcups/files/) but I'm committing the file to this repository, not sure how long SourceForge will be available and it took a long time to find the driver.
+
+Download [CUPS 2.2.3 from Github](https://github.com/apple/cups/tree/v2.2.3) 
+```
+git clone https://github.com/apple/cups.git
+cd cups
+git checkout tags/v2.2.3
+```
+
+Apply Zebra patch for 2030 printer
+
+```
+git apply --stat zebra2030_support.patch
+```
+
+Build the new version of CUPS
+```
+./configure --prefix="$PWD"
+make
+```
+
+Since we installed cups above just need to copy the newly compilied driver for the Zebra 2030 Printer
+```
+sudo cp rastertozebrakiosk /usr/lib/cups/filter/
+```
+
+Restart CUPs and pickup the new Zebra2030 driver
+```
+sudo systemctl restart cups
+```
+
+Having the driver installed get's us part way, still need to import the settings used to configure the printer. I also found these hard to find, and they still needed modification to work.
+PPD file is located in this repository
+
+
 
 
 
