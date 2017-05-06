@@ -168,7 +168,7 @@
 *Eject 80/80: ""
 *Eject 90/90: ""
 *Eject 100/100: ""
-*CloseUI *Eject
+*CloseUI: *Eject
 
 *OpenUI *PageMode/Page Mode: PickOne
 *OrderDependency: 10 AnySetup *PageMode
@@ -250,7 +250,7 @@
 *PartialCut 100/100: ""
 *PartialCut 110/110: ""
 *PartialCut 120/120: ""
-*CloseUI *PartialCut
+*CloseUI: *PartialCut
 
 *CloseGroup: CutGroup
 
@@ -298,7 +298,7 @@
 *BMMax 23/23mm: ""
 *BMMax 24/24mm: ""
 *BMMax 25/25mm: ""
-*CloseUI *BMMax
+*CloseUI: *BMMax
 
 *OpenUI *BMCutPos/BM Cut Position: PickOne
 *OrderDependency: 10 AnySetup *BMCutPos
@@ -354,24 +354,27 @@
 *BMCutPos 48/48mm: ""
 *BMCutPos 49/49mm: ""
 *BMCutPos 50/50mm: ""
-*CloseUI *BMCutPos
+*CloseUI: *BMCutPos
 
 *CloseGroup BMGroup
 
-*OpenUI *Vertmode/Vertical Mode: Boolean
+*OpenGroup: *SystemParam/System Parameter 57
 *OrderDependency: 10 AnySetup *Vertmode
+*OpenUI *Vertmode/Vertical Mode: Boolean
 *DefaultVertmode: 4
 *Vertmode 4/Off: ""
 *Vertmode 0/On: ""
-*CloseUI *Vertmode
+*CloseUI: *Vertmode
 
 *OpenUI *Pulldetect/Enable Pull Detection: Boolean
 *OrderDependency: 10 AnySetup *Pulldetect
 *DefaultPulldetect: 2Off
 *Pulldetect 2Off/On: ""
 *Pulldetect 0On/Off: ""
-*CloseUI *Pulldetect
+*CloseUI: *Pulldetect
 
+*CloseGroup SystemParam
 
-*%ttp20x0.ppd v2006.0.8
+*%ttp20x0.ppd v2016.0.9
 *% End
+
