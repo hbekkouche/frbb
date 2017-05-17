@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block script %}
+<script charset="utf-8">
+  URL_KEY_MAP[100]="{% url "register" %}";
+  URL_KEY_MAP[104]="{% url "login" %}";
+</script>
+{% endblock %}
+
+{% block bodyclass %}terms{% endblock %}
+
+{% block content %}
+  <h3>Terms of Service:</h3>
+  <p>
+    Any True Meaning is owned and operated by 1st Regional
+Bunny Bank and the collective consciousness. The ATM
+dispenses poetry that requires consent for action to occur.
+  </p>
+  <p>
+    Poems may contain content that is saucy, raunchy, lewd,
+crude, sarcastic or sardonic. 1st Regional Bunny Bank is
+released of all liability for reactions caused by poetry
+and will not be held responsible for declines to any poetry
+disseminated by the user. Actions resulting from sharing
+poetry are considered serendipitous with no cause from 1st
+Regional Bunny Bank.
+  </p>
+  <div class="row">
+  	<div class="col-sm-5">
+  		<a href="{% url "index" %}" class="btn btn-sm btn-default">
+  			&lt; Decline
+  		</a>
+  	</div>
+  	<div class="col-sm-5 col-sm-offset-2">
+  		<a href="{% url "register" %}" class="btn btn-sm btn-primary">
+  			Accept &gt;
+  		</a>
+  	</div>
+  </div>
+{% endblock %}
+
+{% block r-button4 %}
+    <!-- <a href="{% url "login" %}" class="btn-lg btn-primary btn">Login</a> -->
+{% endblock %}
+
+
+{% block l-button4 %}
+    <!-- <a href="{% url "register" %}" class="btn btn-lg btn-primary btn">First Time?</a> -->
+{% endblock %}

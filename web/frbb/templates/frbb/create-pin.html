@@ -3,6 +3,9 @@
 {% block head %}
     {{wizard.form.media }}
 {% endblock %}
+
+{% block bodyclass %}register{% endblock %}
+
 {% block script %}
 <script>
   URL_KEY_MAP[104]="{% url "index" %}";

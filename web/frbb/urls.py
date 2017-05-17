@@ -5,6 +5,7 @@ from frbb import forms
 urlpatterns = [ 
         url(r'^$',views.index, name='index'),
         url(r'^dashboard/$',views.dashboard, name='dashboard'),        
+        url(r'^terms/$',views.terms, name='terms'),        
         url(r'^login/$',views.LoginWizard.as_view(views.LOGIN_FORMS), name='login'),
         url(r'^register/$',views.RegisterWizard.as_view(views.REGISTER_FORMS), 
                                                        name='register'),

@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 
+{% block bodyclass %}register{% endblock %}
+
 {% block head %}
     {{wizard.form.media }}
 {% endblock %}
@@ -22,14 +24,6 @@
 
         <p>Push 'OK' after entering account number</p>
     {% endif %}
-    {% if messages  %}
-        {% for message in messages %}
-        <div id="msg" class="alert alert-danger">
-          <strong>Error!</strong> {{ message }}
-        </div>
-        <br />
-        {% endfor %}
-    {% endif %}
 
 
     <form action="" method="post">
@@ -37,9 +31,8 @@
         {{ form.as_p }}
         {% csrf_token %}
     </form>
-
+    <a href="{% url "index" %}" class="btn btn-lg btn-primary btn">Cancel</a>
 {% endblock %}
 
 {% block r-button4 %}
-    <a href="{% url "index" %}" class="btn btn-lg btn-primary btn">Cancel</a>
 {% endblock %}

@@ -57,8 +57,13 @@ WITHDRAW_TEMPLATES = {"withdraw": "frbb/withdraw.html"}
 def index(request):
     if request.user.is_authenticated(): 
         return HttpResponseRedirect(settings.LOGIN_REDIRECT_URL)
-    context_dict = {'boldmessage': "I am bold font from the context"}
+    context_dict = {}
     return render(request, 'frbb/index.html', context_dict)
+
+def terms(request):
+    context_dict = {}
+    return render(request, 'frbb/terms.html', context_dict)
+
 
 class RegisterWizard(SessionWizardView):
 

@@ -4,6 +4,8 @@
 
 {% block title %}Dashboard{% endblock %}
 
+{% block bodyclass %}dashboard{% endblock %}
+
 {% block script %}
 <script type="text/javascript">
   URL_KEY_MAP[100]="{% url "deposit" %}";
@@ -13,21 +15,20 @@
 {% endblock %}
 
 {% block content %}
-    <h1>{{ user }} </h1></p>
-    Account information: </p>
-                Balance: <strong>{{ balance }}</strong><br />
-                Deposits: <strong>{{ deposits }}</strong><br />
-
-    <h2>Patience, printer is slow</h2>
+    <h1>Welcome, {{ user }} </h1>
+    <h3>Patience, printer is slow</h3>
+    <p>Account information:</p>
+    <p>Balance: <strong>{{ balance }}</strong></p>
+    <p>Deposits: <strong>{{ deposits }}</strong></p>
 {% endblock %}
 
 {% block l-button4 %}
-    <a href="{% url "deposit" %}" id="deposit" class="btn btn-lg btn-primary btn">Deposit</a>{% endblock %}
+    <a href="{% url "deposit" %}" id="deposit" class="btn btn-lg btn-success btn">Deposit</a>{% endblock %}
 
 {% block l-button3 %}
-    <a href="{% url "withdraw" %}" class="btn btn-lg btn-primary btn">Withdraw</a>
+    <a href="{% url "withdraw" %}" class="btn btn-lg btn-success btn">Withdraw</a>
 {% endblock %}
 
 {% block r-button4 %}
-    <a href="{% url "logout" %}" class="btn btn-lg btn-primary btn">Logout</a>
+    <a href="{% url "logout" %}" class="btn btn-lg btn-default btn">Logout</a>
 {% endblock %}

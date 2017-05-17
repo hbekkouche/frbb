@@ -6,18 +6,21 @@ $(function() {
 var app = function() {
   $(document).keypress(function(e) {
     console.log('key '+  e.which + 'pressed.');
+    
     // see if we have a registered listener.
     var link = URL_KEY_MAP[e.which] || URL_KEY_MAP[e.which + 48];
     if (link) {
       // Go to the page
       window.location.href = link;
     }
+    
     var action = ACTION_MAP[e.which] || ACTION_MAP[e.which + 48];
     if (action) {
       action();
     }
+
     var form = $("form");
-    if (form.length) {
+    if (form.length && e.which === 13) {
       form.submit();
     }
     // e.preventDefault();

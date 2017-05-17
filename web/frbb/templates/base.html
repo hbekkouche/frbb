@@ -5,13 +5,14 @@
 <html lang="en">
 <head>
     <title>{% block title %}1st Regional Bunny Bank{% endblock %}</title>
-    <link herf="{% static "css/base.css" %}" rel="stylesheet">
+    
     <script src="/static/jquery/dist/jquery.js"></script>
     <script src="/static/js/app.js"></script>
     <script type="text/javascript" src="/static/bootstrap/dist/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="/static/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/static/bootstrap/dist/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="/static/frbb.css">
+    <link rel="stylesheet" href="/static/frbb.css?q=0.1.1">
+    <link herf="{% static "css/base.css" %}?q=0.1.1" rel="stylesheet">
 
     <script type="text/javascript">
       // This is annoying, ideally these would go in app, BUT i forgot in what order JS is executed... :(
@@ -24,11 +25,7 @@
 <body>
     <div id="bdy">
 
-        <div id="content" class="">
-        <div id="header" class="page-header">
-            {% block header %}
-            {% endblock %}
-        </div>
+        <div id="content" class="{%block bodyclass%}default-body-class{% endblock%}">        
             <div id="l-side">
                 <div id="l-button1" class="">
                     {% block l-button1 %}
@@ -53,7 +50,7 @@
                 <div id="spacer" class="spacer50">
                 </div>
             </div>
-            <div id="main" class="jumbotron">
+            <div id="main" class="">
                 {% block content %}
                 {% endblock %}
             </div>
