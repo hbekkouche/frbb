@@ -1,0 +1,190 @@
+@blue: #001FFF;
+@green: #00FF02;
+@pink: #F15DFF;
+@white: #FFF;
+@black: #000;
+
+html, body {
+    overflow: hidden;
+    margin:0px auto;
+    padding: 0px;
+    font-size: 20px;
+}
+html #bdy,
+body #bdy {
+    width: 590px;
+    margin: 0px auto;
+    border: 1px solid #bbb;
+}
+
+h1, h2, h3, h4, h5, h6, p, i, em, strong, b, small, dt, li, dd {
+    font-family: "Courier New", Courier, monospace !important;
+    padding: 0;
+    margin: 0;
+}
+
+
+#header {
+    border: 1px solid #bbb;
+    height: 35px;
+    width: 100%;
+    padding: 0px;
+}
+#content {
+    height: 304px;
+}
+
+#l-side {
+    width: 251px;
+    padding: 0px;
+    border: 0px solid #bbb;
+    position: absolute;
+    bottom: 0;
+}
+
+#main {
+    padding: 15px 5px 0 5px;
+    width: 565px;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+#spacer {
+    height: 40px;
+}
+
+#community {
+    font-size: 30;
+}
+
+#msg {
+    width:100%;
+}
+.input {
+     font-size: 50px;
+     width: 210px;
+}
+#r-side {
+    margin-left: 310px;
+    padding: 0px;
+    border: 0px solid #bbb;
+    width:251px;
+    position: absolute;
+    bottom: 0;
+}
+
+.btn {
+    passing: 10px;
+    width: 248px;
+    font-size: 40px; 
+    line-height: normal;
+}
+.btnctm {
+    font-size: 30;
+}
+.blockquote {
+  fount-size: 26px;
+}
+.btn-sm-ft {
+   font-size: 19px;
+}
+.spacer5 { height: 5px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+.spacer10 { height: 10px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+.spacer15 { height: 15px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+.spacer20 { height: 20px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+.spacer25 { height: 25px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+.spacer30 { height: 30px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+.spacer35 { height: 35px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+.spacer40 { height: 40px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+.spacer45 { height: 45px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+.spacer50 { height: 50px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+.spacer100 { height: 100px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+.spacer200 { height: 200px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+
+// Global overrides
+.btn {
+    border-radius: 0;
+    text-shadow: none;
+    background-image: none;
+    font-size: 28px;
+    text-align: center;
+    line-height: 34px;
+    strong {
+        display: block;
+    }
+    small {
+        font-size: 14px;
+    }
+
+    // colors
+    &.btn-primary {
+        background-color: @pink;
+        color: @black;
+    }
+    &.btn-default {
+        background-color: @white;
+        color: @black;
+    }
+
+    &.btn-success {
+        background-color: @green;
+        color: @black;
+    }
+}
+
+p {
+    font-size: 14px;
+    margin: 0 0 14px;
+}
+
+h1 {
+    text-align: center;
+    margin: 0 0 30px;
+}
+
+h3 {
+    margin: 0 0 6px;
+}
+
+#msg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+
+    &.alert-danger {
+        background-color: @pink;
+        background-image: none;
+        color: @black;
+    }
+}
+
+// Page Specific styles
+#content.home {
+    background: @blue;
+    color: @white;
+    h1 {
+        margin: 40px 0 60px;
+    }
+}
+
+#content.terms {
+    color: @black;
+    background-color: @green;
+}
+
+#content.register {
+    color: @black;
+    background-color: @green;
+}
+
+#content.dashboard {
+    background-color: @pink;
+    color: @blue;
+}
+
+#content.default-body-class {
+    background-color: @blue;
+    color: @white;
+}

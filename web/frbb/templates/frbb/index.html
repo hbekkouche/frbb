@@ -1,4 +1,7 @@
 {% extends "base.html" %}
+
+{% block bodyclass %}home{% endblock %}
+
 {% block script %}
 <script charset="utf-8">
   URL_KEY_MAP[100]="{% url "register" %}";
@@ -8,16 +11,28 @@
 
 
 {% block content %}
-  <h1>1st Regional Bunny Bank</h1>
-<p> <strong>A</strong>ny <strong>T</strong>rue <strong>M</strong>eaning
-<p> Create an account, withdraw, deposit and exchange poetry </p>
+  <h1>Welcome to<br>Any True Meaning!</h1>
+  <div class="row">
+  	<div class="col-sm-4 col-sm-offset-1">
+  		<a href="{% url "terms" %}" class="btn btn-success">
+  			<strong>First Time?</strong>
+  			<small>Press 1</small>
+  		</a>
+  	</div>
+  	<div class="col-sm-4 col-sm-offset-1">
+  		<a href="{% url "login" %}" class="btn btn-primary">
+  			<strong>Do it again?</strong>
+  			<small>Press 2</small>
+  		</a>
+  	</div>
+  </div>
 {% endblock %}
 
 {% block r-button4 %}
-    <a href="{% url "login" %}" class="btn-lg btn-primary btn">Login</a>
+    <!-- <a href="{% url "login" %}" class="btn-lg btn-primary btn">Login</a> -->
 {% endblock %}
 
 
 {% block l-button4 %}
-    <a href="{% url "register" %}" class="btn btn-lg btn-primary btn">First Time?</a>
+    <!-- <a href="{% url "register" %}" class="btn btn-lg btn-primary btn">First Time?</a> -->
 {% endblock %}
