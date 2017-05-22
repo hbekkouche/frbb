@@ -19,21 +19,11 @@
       Step {{ wizard.steps.step1 }} of {{ wizard.steps.count }}
     </div>
   </div>
-{% endblock %}
-
-{% block content %}
-    <script>
-    $(document).keypress(function(e){
-        if (e.which == 104){
-           window.location.href = "{% url "index" %}";
-        }
-    });
-    </script>
-    <form action="" method="post">
-        {{ wizard.management_form }}
-        {{ form.as_p }}
-        {% csrf_token %}
-    </form>
+  <form action="" method="post">
+    {{ wizard.management_form }}
+    {{ form.as_p }}
+    {% csrf_token %}
+  </form>
 {% endblock %}
 
 {% block r-button4 %}
